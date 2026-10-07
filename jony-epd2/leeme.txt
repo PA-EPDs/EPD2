@@ -1,0 +1,209 @@
+================================================================================
+                    DOCUMENTACIÓN DE ESTILOS CSS - EPD 2 (Ej1)
+                     Jornadas de Ponencias y Empleo 2026 (UPO)
+                                   (Equipo 06)
+================================================================================
+
+ESTUDIANTE: Jonathan Quishpe
+ASIGNATURA: Programación Avanzada - Grado en Ingeniería Informática
+CURSO: 2026/2027
+PRÁCTICA: EPD 2 - Hojas de estilo CSS (Ejercicio 1)
+DIRECTORIO DE TRABAJO: jony-epd2
+PÁGINAS ASIGNADAS:
+  • inscripcion.html (Página padre - Formulario y tarifas)
+  • contacto.html    (Página padre - Atención y directorio)
+
+================================================================================
+                    1. RESUMEN CUANTITATIVO DE LA PRÁCTICA
+================================================================================
+
+A continuación se detallan las métricas exigidas en el guión de la EPD 2:
+
+1. NÚMERO DE ESTILOS (REGLAS CSS) CREADOS:
+   • Total de bloques de reglas CSS: 91 reglas
+   • Mínimo exigido en el guión: 50 reglas
+   • Cumplimiento: Supera ampliamente el mínimo (182% del requisito).
+
+2. NÚMERO DE PSEUDOCLASES DISTINTAS EMPLEADAS:
+   • Total de pseudoclases distintas: 17 pseudoclases
+   • Mínimo exigido en el guión: 12 pseudoclases
+   • Cumplimiento: Supera el mínimo exigido (141% del requisito).
+
+   Listado detallado de las 17 pseudoclases empleadas y su propósito:
+   1)  :link          - Enlaces no visitados en navegación y contenido general.
+   2)  :visited       - Enlaces ya visitados por el usuario.
+   3)  :hover         - Realce interactivo al pasar el cursor (enlaces, botones, filas de tabla, imágenes, etiquetas).
+   4)  :active        - Efecto visual de pulsación sobre enlaces y botones.
+   5)  :focus         - Indicador accesible al recibir foco en inputs, select, textarea y enlaces.
+   6)  :focus-within  - Realce del fieldset y su contenedor cuando cualquier campo interno tiene el foco.
+   7)  :first-child   - Espaciado especial para el primer elemento de la lista de navegación.
+   8)  :last-child    - Ajuste de márgenes para el último elemento en listas y filas de formulario.
+   9)  :first-of-type - Destacado tipo "callout" del primer párrafo introductorio en el contenido.
+   10) :nth-child()   - Filas alternadas en tablas (cebreado :nth-child(even) y :nth-child(odd)).
+   11) :not()         - Selectores de exclusión para aplicar estilos generales a inputs evitando checkboxes/radios/botones.
+   12) :checked       - Estilización y énfasis tipográfico para radio buttons y checkboxes marcados (+ label).
+   13) :disabled      - Apariencia atenuada e indicador de no permitido para opciones y campos inactivos.
+   14) :required      - Indicador visual con borde lateral destacado para campos obligatorios del formulario.
+   15) :optional      - Borde suave para campos opcionales del formulario.
+   16) :valid         - Confirmación visual (borde verde) para campos completados correctamente.
+   17) :invalid       - Alerta visual (borde rojo y sombra sutil) al enfocar campos con formato no válido.
+
+3. NÚMERO DE ATRIBUTOS (PROPIEDADES CSS) DISTINTOS EMPLEADOS:
+   • Total de propiedades CSS distintas: 46 propiedades
+   • Listado alfabético de propiedades:
+     1.  accent-color
+     2.  background-color
+     3.  border
+     4.  border-bottom
+     5.  border-collapse
+     6.  border-color
+     7.  border-left
+     8.  border-left-color
+     9.  border-radius
+     10. border-right
+     11. border-top
+     12. box-shadow
+     13. box-sizing
+     14. clear
+     15. color
+     16. content
+     17. cursor
+     18. display
+     19. float
+     20. font-family
+     21. font-size
+     22. font-style
+     23. font-weight
+     24. height
+     25. letter-spacing
+     26. line-height
+     27. list-style-type
+     28. margin
+     29. margin-bottom
+     30. margin-left
+     31. margin-right
+     32. margin-top
+     33. max-width
+     34. min-height
+     35. outline
+     36. padding
+     37. padding-bottom
+     38. padding-left
+     39. resize
+     40. text-align
+     41. text-decoration
+     42. text-transform
+     43. transform
+     44. transition
+     45. vertical-align
+     46. width
+
+================================================================================
+          2. METODOLOGÍA DE MAQUETACIÓN (DISEÑO A 2 COLUMNAS CON FLOAT)
+================================================================================
+
+Siguiendo estrictamente las indicaciones de la EPD 2 para páginas padre:
+• Estructura clásica en dos columnas:
+  - Columna izquierda (<nav>):
+    * Ancho fluido: width: 22%
+    * Flotación: float: left
+    * Fondo institucional suave (#d9e8f5) con borde lateral separador
+    * Contiene enlaces a todas las secciones padre de la web.
+    * En la sección padre activa, despliega un submenú (<ul class="submenu">)
+      con acceso directo a las secciones hijas o apartados internos de la página.
+  - Columna derecha/central (<main>):
+    * Ancho fluido: width: 78%
+    * Flotación: float: right
+    * Fondo blanco (#ffffff) con relleno adecuado para lectura y presentación.
+• Contenedor envolvente con limpieza de floats:
+  - Clase .contenedor-columnas envolviendo <nav> y <main>.
+  - Técnica clearfix mediante pseudoelemento:
+    .contenedor-columnas::after { content: ""; display: table; clear: both; }
+• Pie de página (<footer>):
+  - Limpieza completa mediante clear: both; width: 100%.
+• Modelo de caja global:
+  - box-sizing: border-box aplicado a todos los elementos (*) para garantizar
+    que los porcentajes (22% + 78% = 100%) no sufran desbordamiento por padding o bordes.
+
+================================================================================
+       3. PERSONALIZACIÓN VISUAL DE TODOS LOS ELEMENTOS HTML VISIBLES
+================================================================================
+
+Ningún elemento visible conserva el estilo tosco por defecto del navegador:
+1. Formularios completos:
+   • fieldset: bordes redondeados suaves (#b5d1ea), fondo neutro y realce dinámico
+     con :focus-within (sombra y borde azul institucional).
+   • legend: fondo sólido destacado (#d9e8f5), texto en azul oscuro, borde sutil.
+   • label: tipografía seminegrilla, cursor pointer y cambio de color en :hover.
+   • inputs (text, email, tel, url, date, search, file, color): padding cómodo,
+     bordes redondeados, bordes indicadores de obligatoriedad (:required) y foco limpio.
+   • select, optgroup y option: estilizados acordes a la paleta, con cursor interactivo.
+   • textarea: control vertical de redimensión (resize: vertical), altura mínima adaptable.
+   • radio y checkbox: acentuados en azul con accent-color, etiquetas adyacentes
+     resaltadas al estar marcadas (:checked + label).
+   • botones submit y reset: botones modernos con contraste cromático, efectos
+     hover, sombras y microinteracción de pulsación (:active con translateY).
+   • output: marco informativo tipo badge con borde suave y cursiva.
+2. Tablas de datos y tarifas:
+   • border-collapse, cabecera thead con fondo azul corporativo (#1f4e79) y texto blanco.
+   • Encabezados de fila (th scope="row" / scope="rowgroup") con fondo contrastado.
+   • Filas de datos alternadas con :nth-child(even) y :nth-child(odd).
+   • Realce interactivo al pasar el ratón (:hover) sobre cada fila de la tabla.
+3. Medidores y barras de progreso:
+   • progress y meter adaptados a la anchura del contenedor con acento corporativo.
+4. Figuras e imágenes:
+   • figure con tarjeta decorativa, sombra sutil, bordes suaves y pie figcaption en cursiva.
+   • Efecto zoom sutil y realce de borde al pasar el cursor sobre la imagen.
+5. Bloques de texto institucional:
+   • address con borde vertical decorativo, padding y fondo contrastado.
+   • mark con amarillo pastel suave y texto rojizo.
+
+================================================================================
+    4. ASPECTOS DE MEJORA INCORPORADOS RESPECTO A LA REFERENCIA (ale-epd2)
+================================================================================
+
+Tomando como base la identidad visual de la implementación de referencia
+(/Users/jonathanquishpe/Desktop/Temporal/PA-EPDs/EPD2/ale-epd2), se identificaron
+y corrigieron los siguientes aspectos críticos para nuestra entrega:
+
+1. Reglas CSS insuficientes en la referencia:
+   • La referencia contaba con 41 reglas, sin alcanzar las 50 mínimas exigidas.
+   • En jony-epd2 se han desarrollado 91 reglas estructuradas y mantenibles.
+
+2. Pseudoclases incompletas en la referencia:
+   • La referencia empleaba únicamente 8 pseudoclases distintas, incumpliendo
+     el mínimo de 12 exigido por el guión.
+   • En jony-epd2 se han aplicado 17 pseudoclases distintas cubriendo estados de
+     foco, posición, validación, selección y activación.
+
+3. Falta de estilización de formularios:
+   • La referencia no incluía ninguna regla para controles de formulario
+     (inputs, fieldsets, selects, textareas, botones, validación, etc.).
+   • En jony-epd2 se ha proporcionado una maquetación y personalización integral
+     de todos los controles de formulario presentes en inscripcion.html y contacto.html.
+
+4. Desbordamiento de altura fija (min-height: 750px):
+   • La referencia utilizaba un min-height rígido de 750px en ambas columnas.
+     En páginas con formularios extensos (como inscripción y contacto), el menú
+     quedaba cortado de forma visualmente discordante.
+   • En jony-epd2 se incorpora un contenedor con clearfix (.contenedor-columnas)
+     que garantiza la estabilidad del flujo y la limpieza correcta del footer.
+
+5. Menú lateral con secciones hijas:
+   • La referencia mantenía un menú plano sin subapartados ni distinción de página activa.
+   • En jony-epd2 se destacan las páginas activas (.activo / aria-current="page") y se
+     despliegan las secciones hijas disponibles de cada página padre.
+
+6. Documentación técnica inexistente en la referencia:
+   • La referencia carecía del archivo leeme.txt exigido en el guión.
+   • En jony-epd2 se proporciona este documento completo con todo el desglose métrico.
+
+================================================================================
+                    5. ARCHIVOS CONTENIDOS EN jony-epd2
+================================================================================
+
+• inscripcion.html : Página padre con formulario de registro, tarifas y progreso.
+• contacto.html    : Página padre con formulario de contacto y directorio de delegados.
+• estilos.css      : Hoja de estilos compartida con 91 reglas y 17 pseudoclases.
+• imagenes/        : Directorio local con inscripcion.png y contacto.jpg.
+• leeme.txt        : Documentación técnica detallada de la entrega.
