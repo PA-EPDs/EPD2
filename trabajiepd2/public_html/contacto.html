@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Jornadas de Ponencias y Empleo 2026 - Universidad Pablo de Olavide</title>
+    <meta name="description" content="Contacto con la organización de las Jornadas de Ponencias y Empleo 2026 de la Universidad Pablo de Olavide.">
+</head>
+<body>
+
+    <header>
+        <h1>Jornadas de Ponencias y Empleo 2026 - Universidad Pablo de Olavide</h1>
+        <h2>Contacto</h2>
+    </header>
+
+    <nav aria-label="Navegación principal">
+        <h2>MENÚ PRINCIPAL</h2>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="programa.html">Programa</a></li>
+            <li><a href="actividades.html">Actividades</a></li>
+            <li><a href="ponentes.html">Ponentes</a></li>
+            <li><a href="asociaciones.html">Asociaciones</a></li>
+            <li><a href="multimedia.html">Multimedia</a></li>
+            <li><a href="inscripcion.html">Inscripción</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <article>
+            <h2>Escríbenos</h2>
+            <p>
+                Rellena el formulario y la organización te responderá en
+                menos de <data value="48">48 horas laborables</data>. Los campos
+                marcados con <mark>*</mark> son obligatorios.
+            </p>
+
+            <figure>
+                <a href="imagenes/contacto.jpg">
+                    <img src="imagenes/contacto.jpg"
+                         alt="Punto de información de la organización de las jornadas"
+                         width="400" height="267">
+                </a>
+                <figcaption>
+                    Punto de información en el campus. Miniatura con enlace a la
+                    imagen en resolución completa.
+                </figcaption>
+            </figure>
+
+            <form action="contacto.html" method="get">
+                <fieldset>
+                    <legend>Formulario de contacto</legend>
+
+                    <div>
+                        <label for="nombre-contacto">Nombre y apellidos <mark>*</mark></label>
+                        <input type="text" id="nombre-contacto" name="nombre"
+                               placeholder="Tu nombre completo"
+                               autocomplete="name"
+                               minlength="2" maxlength="60"
+                               required>
+                    </div>
+
+                    <div>
+                        <label for="email-contacto">Correo electrónico <mark>*</mark></label>
+                        <input type="email" id="email-contacto" name="email"
+                               placeholder="ejemplo@upo.es"
+                               autocomplete="email"
+                               required>
+                    </div>
+
+                    <div>
+                        <label for="tel-contacto">Teléfono</label>
+                        <input type="tel" id="tel-contacto" name="telefono"
+                               placeholder="600123456"
+                               pattern="[0-9]{9}"
+                               title="Introduce 9 dígitos sin espacios">
+                    </div>
+
+                    <div>
+                        <label for="asunto">Asunto <mark>*</mark></label>
+                        <input type="search" id="asunto" name="asunto"
+                               list="lista-asuntos"
+                               placeholder="Escribe o selecciona un asunto"
+                               required>
+                        <datalist id="lista-asuntos">
+                            <option value="Inscripción y acreditados">
+                            <option value="Programa y horarios">
+                            <option value="Talleres y actividades">
+                            <option value="Ponentes y propuestas">
+                            <option value="Feria de empleo y empresas">
+                            <option value="Prensa y medios">
+                            <option value="Accesibilidad y adaptaciones">
+                        </datalist>
+                    </div>
+
+                    <div>
+                        <span>Motivo de la consulta <mark>*</mark></span>
+                        <input type="radio" id="motivo-participante" name="motivo"
+                               value="participante" checked>
+                        <label for="motivo-participante">Como participante</label>
+                        <input type="radio" id="motivo-empresa" name="motivo"
+                               value="empresa">
+                        <label for="motivo-empresa">Como empresa / ponente</label>
+                        <input type="radio" id="motivo-prensa" name="motivo"
+                               value="prensa">
+                        <label for="motivo-prensa">Como medio de comunicación</label>
+                    </div>
+
+                    <div>
+                        <label for="fecha-contacto">Fecha preferida de contacto</label>
+                        <input type="date" id="fecha-contacto" name="fecha"
+                               min="2026-10-01" max="2026-11-30">
+                    </div>
+
+                    <div>
+                        <label for="mensaje">Mensaje <mark>*</mark></label>
+                        <textarea id="mensaje" name="mensaje"
+                                  rows="6" cols="40"
+                                  minlength="20" maxlength="1000"
+                                  placeholder="Describe tu consulta con el mayor detalle posible."
+                                  required></textarea>
+                        <small>Mínimo 20 y máximo 1.000 caracteres.</small>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="rgpd" name="rgpd" value="acepto"
+                               required>
+                        <label for="rgpd">Acepto que mis datos se usen
+                            únicamente para responder a esta consulta <mark>*</mark></label>
+                    </div>
+
+                    <p>
+                        <input type="submit" value="Enviar mensaje">
+                        <input type="reset" value="Limpiar formulario">
+                    </p>
+
+                    <output name="estado_contacto" for="nombre-contacto asunto">
+                        Formulario de contacto listo para enviar.
+                    </output>
+                </fieldset>
+            </form>
+        </article>
+
+        <section>
+            <h2>Delegados por área</h2>
+            <table border="1">
+                <caption>Responsables de cada ámbito de las jornadas</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Área</th>
+                        <th scope="col">Delegado/a</th>
+                        <th scope="col">Horario de atención</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="rowgroup" rowspan="2">Organización general</th>
+                        <td>Coraima (coordinación)</td>
+                        <td rowspan="2">Lunes a viernes, de
+                            <time datetime="09:00">9:00</time> a
+                            <time datetime="14:00">14:00</time></td>
+                    </tr>
+                    <tr>
+                        <td>Jonathan (inscripciones)</td>
+                    </tr>
+                    <tr>
+                        <th scope="rowgroup" rowspan="2">Contenidos y actividades</th>
+                        <td>Dani (noticias y prensa)</td>
+                        <td rowspan="2">Lunes y miércoles, de
+                            <time datetime="10:00">10:00</time> a
+                            <time datetime="12:00">12:00</time></td>
+                    </tr>
+                    <tr>
+                        <td>Paola (talleres, deportes y cultura)</td>
+                    </tr>
+                    <tr>
+                        <th scope="rowgroup" rowspan="2">Ponencias y colaboraciones</th>
+                        <td>Carolina (ponentes)</td>
+                        <td rowspan="2">Martes y jueves, de
+                            <time datetime="11:00">11:00</time> a
+                            <time datetime="13:00">13:00</time></td>
+                    </tr>
+                    <tr>
+                        <td>Ale (asociaciones y multimedia)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Coordinación internacional</th>
+                        <td><bdi>Yuki Tanaka</bdi> / <bdi>Élise Moreau</bdi></td>
+                        <td colspan="1">Sólo con cita previa, en la sala polivalente</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Medios de contacto directo</h2>
+            <address>
+                <p>
+                    <strong>Secretaría de las jornadas</strong><br>
+                    Universidad Pablo de Olavide<br>
+                    Ctra. de Utrera, km 1 &middot; 41706 Dos Hermanas (Sevilla)
+                </p>
+                <p>
+                    Correo electrónico:
+                    <a href="mailto:jornadasempleo2026@upo.es">jornadasempleo<wbr>2026<wbr>@upo.es</a>
+                </p>
+                <p>
+                    Teléfono:
+                    <a href="tel:+34954550000">+34 954 550 000</a> (ext.
+                    <data value="2140">2140</data>)
+                </p>
+            </address>
+
+            <h3>Acciones rápidas</h3>
+            <ul>
+                <li><a href="inscripcion.html">Ir al formulario de inscripción</a></li>
+                <li><a href="programa.html">Consultar el programa</a></li>
+                <li><a href="mailto:jornadasempleo2026@upo.es">Escribir al correo de las jornadas</a></li>
+            </ul>
+        </section>
+
+        <aside>
+            <h2>Visítanos</h2>
+            <ul>
+                <li>El punto de información físico está junto a la entrada del salón de actos.</li>
+                <li>Horario de la semana de jornadas: de
+                    <time datetime="08:30">8:30</time> a
+                    <time datetime="20:00">20:00</time>.</li>
+                <li>Cómo llegar: línea de autobús urbano M-122 y parking 3 del campus.</li>
+            </ul>
+            <p>
+                Si tu duda está relacionada con tu cuenta de usuario, revisa
+                también la página de <a href="login.html">login</a>.
+            </p>
+        </aside>
+
+    </main>
+
+    <footer>
+        <p>Jornadas de Ponencias y Empleo 2026</p>
+    </footer>
+
+</body>
+</html>

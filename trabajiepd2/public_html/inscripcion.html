@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción - Jornadas de Ponencias y Empleo 2026 - Universidad Pablo de Olavide</title>
+    <meta name="description" content="Formulario de inscripción a las Jornadas de Ponencias y Empleo 2026 de la Universidad Pablo de Olavide.">
+</head>
+<body>
+
+    <header>
+        <h1>Jornadas de Ponencias y Empleo 2026 - Universidad Pablo de Olavide</h1>
+        <h2>Inscripción</h2>
+    </header>
+
+    <nav aria-label="Navegación principal">
+        <h2>MENÚ PRINCIPAL</h2>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="programa.html">Programa</a></li>
+            <li><a href="actividades.html">Actividades</a></li>
+            <li><a href="ponentes.html">Ponentes</a></li>
+            <li><a href="asociaciones.html">Asociaciones</a></li>
+            <li><a href="multimedia.html">Multimedia</a></li>
+            <li><a href="inscripcion.html">Inscripción</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <article>
+            <h2>Formulario de inscripción</h2>
+            <p>
+                Completa el siguiente formulario para reservar tu plaza en las jornadas.
+                Los campos marcados con <mark>*</mark> son obligatorios. La
+                inscripción permanecerá abierta hasta el
+                <time datetime="2026-11-06">6 de noviembre de 2026</time>.
+            </p>
+
+            <figure>
+                <a href="imagenes/inscripcion.png">
+                    <img src="imagenes/inscripcion.png"
+                         alt="Estudiantes completando el formulario de inscripción en las jornadas anteriores"
+                         width="267" height="400">
+                </a>
+                <figcaption>
+                    Punto de inscripción presencial. Miniatura con enlace a la
+                    imagen en resolución completa.
+                </figcaption>
+            </figure>
+
+            <!-- ============ FORMULARIO PRINCIPAL ============ -->
+            <form id="form-inscripcion" action="inscripcion.html" method="post" enctype="multipart/form-data">
+
+                <fieldset>
+                    <legend>1. Datos personales</legend>
+
+                    <div>
+                        <label for="nombre">Nombre <mark>*</mark></label>
+                        <input type="text" id="nombre" name="nombre"
+                               placeholder="Tu nombre"
+                               autocomplete="given-name"
+                               minlength="2" maxlength="40"
+                               size="40"
+                               autofocus
+                               required>
+                    </div>
+
+                    <div>
+                        <label for="apellidos">Apellidos <mark>*</mark></label>
+                        <input type="text" id="apellidos" name="apellidos"
+                               autocomplete="family-name"
+                               minlength="2" maxlength="60"
+                               required>
+                    </div>
+
+                    <div>
+                        <label for="email">Correo electrónico <mark>*</mark></label>
+                        <input type="email" id="email" name="email"
+                               placeholder="ejemplo@upo.es"
+                               autocomplete="email"
+                               required>
+                    </div>
+
+                    <div>
+                        <label for="telefono">Teléfono <mark>*</mark></label>
+                        <input type="tel" id="telefono" name="telefono"
+                               placeholder="600123456"
+                               pattern="[0-9]{9}"
+                               title="Introduce 9 dígitos, por ejemplo 600123456"
+                               autocomplete="tel"
+                               required>
+                        <small>Formato: 9 dígitos sin espacios ni guiones.</small>
+                    </div>
+
+                    <div>
+                        <label for="web">Página web o portfolio (opcional)</label>
+                        <input type="url" id="web" name="web"
+                               placeholder="https://tuportfolio.es">
+                    </div>
+
+                    <div>
+                        <label for="nacimiento">Fecha de nacimiento <mark>*</mark></label>
+                        <input type="date" id="nacimiento" name="nacimiento"
+                               min="1940-01-01" max="2012-12-31"
+                               required>
+                    </div>
+
+                    <div>
+                        <label for="dni">Número de documento <mark>*</mark></label>
+                        <input type="text" id="dni" name="dni"
+                               pattern="[0-9]{8}[A-Za-z]"
+                               title="8 dígitos y una letra, por ejemplo 12345678A"
+                               required>
+                    </div>
+
+                    <div>
+                        <label for="color-insignia">Color de la insignia de la jornada</label>
+                        <input type="color" id="color-insignia" name="color_insignia"
+                               value="#1f3a6e">
+                    </div>
+
+                    <div>
+                        <label for="foto">Foto para el acreditado (opcional)</label>
+                        <input type="file" id="foto" name="foto"
+                               accept="image/png, image/jpeg"
+                               multiple>
+                        <small>Formatos admitidos: PNG y JPG. Máximo 2 archivos.</small>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>2. Perfil del participante</legend>
+
+                    <div>
+                        <span>Tipo de participante <mark>*</mark></span>
+                        <input type="radio" id="perfil-upo" name="perfil"
+                               value="estudiante-upo" required checked>
+                        <label for="perfil-upo">Estudiante de la UPO</label>
+
+                        <input type="radio" id="perfil-otra" name="perfil"
+                               value="estudiante-otra">
+                        <label for="perfil-otra">Estudiante de otra institución</label>
+
+                        <input type="radio" id="perfil-profesional" name="perfil"
+                               value="profesional-empresa">
+                        <label for="perfil-profesional">Profesional / empresa</label>
+                    </div>
+
+                    <div>
+                        <label for="centro-entidad">Centro, universidad o empresa de procedencia <mark>*</mark></label>
+                        <input type="text" id="centro-entidad" name="centro_entidad"
+                               placeholder="Ej. Escuela Politécnica Superior, Univ. de Sevilla, Tech Corp..."
+                               minlength="3" maxlength="80"
+                               required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>3. Actividad a la que se inscribe</legend>
+
+                    <div>
+                        <span>Ámbito de interés <mark>*</mark></span>
+                        <input type="checkbox" id="act-ponencias" name="interes_actividad"
+                               value="ponencias" checked>
+                        <label for="act-ponencias">Ponencias</label>
+
+                        <input type="checkbox" id="act-actividades" name="interes_actividad"
+                               value="actividades">
+                        <label for="act-actividades">Actividades</label>
+
+                        <input type="checkbox" id="act-feria" name="interes_actividad"
+                               value="feria">
+                        <label for="act-feria">Feria de empleo</label>
+                    </div>
+
+                    <div>
+                        <label for="actividad-principal">Actividad principal <mark>*</mark></label>
+                        <select id="actividad-principal" name="actividad_principal" required>
+                            <option value="" disabled selected>Selecciona una actividad...</option>
+                            <optgroup label="Ponencias">
+                                <option value="ponencia-ia">Inteligencia Artificial y mercado laboral (Laura Martínez)</option>
+                                <option value="ponencia-seguridad">Ciberseguridad en la era digital (Carlos Fernández)</option>
+                            </optgroup>
+                            <optgroup label="Talleres">
+                                <option value="taller-rrss">Creación de contenido RRSS</option>
+                                <option value="taller-ia">Inteligencia Artificial</option>
+                                <option value="taller-programacion">Programación</option>
+                                <option value="taller-ciberseguridad">Ciberseguridad y privacidad</option>
+                                <option value="taller-cv-linkedin">CV y LinkedIn</option>
+                                <option value="taller-gestion-proyectos">Gestión de proyectos</option>
+                                <option value="taller-educacion-financiera">Educación financiera</option>
+                                <option value="taller-networking">Networking</option>
+                                <option value="taller-negociacion">Negociación</option>
+                                <option value="taller-liderazgo">Liderazgo</option>
+                                <option value="taller-artes-escenicas">Artes escénicas</option>
+                                <option value="taller-karaoke">Karaoke</option>
+                                <option value="taller-baile">Baile</option>
+                                <option value="taller-videojuegos">Vídeo juegos y juegos de mesa</option>
+                                <option value="taller-fotografia">Fotografía</option>
+                            </optgroup>
+                            <optgroup label="Deportes">
+                                <option value="deporte-natacion">Natación</option>
+                                <option value="deporte-running">Running</option>
+                                <option value="deporte-calistenia">Calistenia</option>
+                                <option value="deporte-ciclismo">Ciclismo</option>
+                                <option value="deporte-futbol">Fútbol</option>
+                                <option value="deporte-balonmano">Balonmano</option>
+                                <option value="deporte-volley">Volley</option>
+                                <option value="deporte-padel">Pádel</option>
+                            </optgroup>
+                            <optgroup label="Cultura">
+                                <option value="cultura-historia-tradiciones">Historia y tradiciones locales</option>
+                                <option value="cultura-gastronomia-tradicional">Gastronomía tradicional</option>
+                                <option value="cultura-oficios">Oficios</option>
+                                <option value="cultura-club-lectura">Club de lectura</option>
+                                <option value="cultura-escritura">Escritura</option>
+                                <option value="cultura-debates-filosoficos">Debates filosóficos</option>
+                                <option value="cultura-intercambio-linguistico">Intercambio lingüístico</option>
+                                <option value="cultura-lenguaje-senas">Lenguaje de señas</option>
+                                <option value="cultura-gastronomia-internacional">Gastronomía internacional</option>
+                            </optgroup>
+                            <optgroup label="Feria de empleo">
+                                <option value="feria-stands">Acceso a stands de empresas y networking</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>4. Confirmación y envío</legend>
+
+                    <div>
+                        <input type="checkbox" id="condiciones" name="condiciones"
+                               value="acepto" required>
+                        <label for="condiciones">He leído y acepto las condiciones
+                            de inscripción y la política de privacidad <mark>*</mark></label>
+                    </div>
+
+                    <p>
+                        <input type="submit" value="Enviar inscripción">
+                        <input type="reset" value="Restablecer formulario">
+                    </p>
+                </fieldset>
+            </form>
+
+            <!-- Segundo formulario: sin validación (atributo novalidate) -->
+            <form action="contacto.html" method="get" novalidate>
+                <fieldset>
+                    <legend>Solicitud de información rápida</legend>
+                    <div>
+                        <label for="email-info">Correo electrónico</label>
+                        <input type="email" id="email-info" name="email_info"
+                               placeholder="ejemplo@upo.es">
+                    </div>
+                    <div>
+                        <label for="mensaje-info">Mensaje</label>
+                        <input type="text" id="mensaje-info" name="mensaje_info"
+                               placeholder="Tu duda en una línea">
+                    </div>
+                    <p>
+                        <input type="submit" value="Enviar consulta rápida">
+                    </p>
+                </fieldset>
+            </form>
+        </article>
+
+        <section>
+            <h2>Tarifas de la inscripción</h2>
+            <table border="1">
+                <caption>Importes según perfil del participante</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Perfil</th>
+                        <th scope="col">Ponencias</th>
+                        <th scope="col">Actividades</th>
+                        <th scope="col">Feria de empleo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="rowgroup" rowspan="2">Estudiante de la UPO</th>
+                        <td>Gratuito</td>
+                        <td rowspan="2">Gratuito (plazas limitadas)</td>
+                        <td rowspan="2">Gratuito</td>
+                    </tr>
+                    <tr>
+                        <td>Gratuito con acreditación</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Estudiante de otra institución</th>
+                        <td><data value="5">5 &euro;</data></td>
+                        <td><data value="8">8 &euro;</data> por actividad</td>
+                        <td>Gratuito</td>
+                    </tr>
+                    <tr>
+                        <th scope="rowgroup" rowspan="2">Profesional / empresa</th>
+                        <td rowspan="2"><data value="15">15 &euro;</data></td>
+                        <td><data value="20">20 &euro;</data> por actividad</td>
+                        <td rowspan="2">Gratuito</td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">Precio reducido si
+                            llegas antes del <time datetime="2026-10-25">25 de
+                            octubre</time></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Estado de las plazas</h2>
+            <p>
+                Avance de la inscripción colectiva
+                (<data value="1240">1.240</data> de
+                <data value="2000">2.000 plazas</data>):
+                <progress value="1240" max="2000">62 %</progress>
+            </p>
+            <p>
+                Plazas disponibles por ámbito:
+            </p>
+            <ul>
+                <li>Ponencias: <meter value="760" min="0" max="1000" optimum="800">760 de 1.000</meter></li>
+                <li>Actividades: <meter value="210" min="0" max="300" optimum="250">210 de 300</meter></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Jornadas de Ponencias y Empleo 2026</p>
+    </footer>
+
+</body>
+</html>

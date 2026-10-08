@@ -1,0 +1,513 @@
+================================================================================
+                    DOCUMENTACIÓN DE ELEMENTOS HTML5 UTILIZADOS
+                     Jornadas de Ponencias y Empleo 2026 (UPO)
+                                   (Equipo 06)
+================================================================================
+
+PROYECTO: Jornadas de Ponencias y Empleo 2026 - Universidad Pablo de Olavide
+ENTIDAD: Universidad Pablo de Olavide (UPO)
+DIRECTORIO: equipo06-v2
+EQUIPO: Equipo 06
+AUTOR: Jonathan Quishpe
+FECHA: Octubre 2026
+
+================================================================================
+          MEJORAS Y HOMOGENEIZACIÓN INCORPORADAS EN LA VERSIÓN 2 (equipo06-v2)
+================================================================================
+
+1. NOMBRE DEL EVENTO UNIFICADO:
+   Se ha unificado en todos los títulos (<title>) y encabezados institucionales
+   (<h1>) la denominación exacta:
+   "Jornadas de Ponencias y Empleo 2026 - Universidad Pablo de Olavide".
+   Se han sustituido todas las denominaciones dispares previas.
+
+2. CABECERA COMÚN:
+   Estructura homogénea en todas las páginas mediante <header>:
+   - <h1> con el nombre institucional del evento.
+   - <h2> con el título específico de la sección o subpágina.
+
+3. MENÚ PRINCIPAL COMÚN:
+   Presente en la parte superior de las 10 páginas principales bajo <nav> con el
+   encabezado <h2>MENÚ PRINCIPAL</h2> y el orden exacto consensuado:
+   Inicio → Login → Programa → Actividades → Ponentes → Asociaciones →
+   Multimedia → Inscripción → Contacto → Noticias.
+   Las subpáginas específicas cuentan además con sus respectivos menús de navegación
+   interna contextual (talleres, deportes, cultura, ponentes y noticias).
+
+4. PIE DE PÁGINA COMÚN:
+   Unificado en los 17 archivos HTML con la estructura semántica idéntica:
+   <footer><p>Jornadas de Ponencias y Empleo 2026</p></footer>.
+
+5. INDEX.HTML (INICIO):
+   Horario representativo completo de lunes a viernes, distinguiendo franjas de
+   mañana y tarde de forma coherente con el programa general de actividades.
+
+6. LOGIN.HTML:
+   Incorporación del menú principal completo de 10 enlaces en la cabecera.
+
+7. PROGRAMA.HTML:
+   Estructuración coherente de lunes a viernes, coordinando los horarios con
+   las ponencias magistrales de Laura Martínez (martes 10:30-12:00) y Carlos
+   Fernández (jueves 09:00-10:30), así como con los talleres, deportes y cultura.
+
+8. PONENTES.HTML Y SUBPÁGINAS:
+   Unificación del menú principal en la matriz de ponentes, enlaces a las fichas
+   individuales (ponente1.html y ponente2.html) y actualización del nombre oficial.
+
+9. ACTIVIDADES.HTML Y SUBPÁGINAS:
+   Coherencia temática total con el programa general, integración de las charlas
+   de los ponentes en los talleres correspondientes y menús internos en las páginas
+   hijas (talleres.html, deportes.html, cultura.html).
+
+10. INSCRIPCIÓN.HTML:
+    Revisión y ajuste terminológico diferenciando "actividades" a nivel general y
+    "talleres" para la categoría específica; tarifas estructuradas por perfiles.
+
+11. CONTACTO.HTML:
+    Depuración del bloque de acciones rápidas, asegurando un enlace directo y
+    funcional para correo electrónico (mailto:jornadasempleo2026@upo.es).
+
+12. NOTICIAS.HTML Y SUBPÁGINAS:
+    Corrección del enlace a Inicio (index.html) y unificación de rutas de imágenes.
+
+13. ORGANIZACIÓN Y NOMENCLATURA DE IMÁGENES:
+    Consolidación de todos los recursos gráficos locales en la carpeta única
+    imagenes/ con nombres descriptivos y normalizados.
+
+14. ASOCIACIONES.HTML Y MULTIMEDIA.HTML COMPLETADOS:
+    - asociaciones.html incluye las tres asociaciones: Programación, Robótica y
+      Videojuegos con sus respectivas fotografías.
+    - multimedia.html incorpora reproductores nativos HTML5 (<video> y <audio>)
+      con controles, fuentes alternativas y textos de reserva sin advertencias TODO.
+
+================================================================================
+                    ELEMENTOS HTML5 UTILIZADOS POR ARCHIVO
+================================================================================
+
+─────────────────────────────────────────────────────────────────────────────
+                              INDEX.HTML                                     
+                            (Página de Inicio)                               
+─────────────────────────────────────────────────────────────────────────────
+
+TÍTULO: Inicio - Jornadas de Ponencias y Empleo 2026 - Universidad Pablo de Olavide
+CABECERA PRINCIPAL:
+• <header>          - Cabecera con <h1> y <h2>Inicio</h2>
+• <nav>             - Menú con lista <ul>/<li> enlazando a las 10 páginas principales
+
+ELEMENTOS ESTRUCTURALES Y SEMÁNTICOS:
+• <main>            - Contenedor principal de la página
+• <article>         - Contenido central de bienvenida (<h2>Bienvenido</h2>)
+• <section>         - 3 secciones temáticas:
+                      1. "Qué habrá" (listas anidadas <ul>/<li>)
+                      2. "Cómo participar" (lista ordenada <ol>/<li>)
+                      3. "Horario" (tabla horaria general semanal)
+• <aside>           - Bloque complementario con enlaces rápidos
+• <footer>          - Pie institucional (<p>Jornadas de Ponencias y Empleo 2026</p>)
+
+MULTIMEDIA:
+• <figure>          - Contenedor semántico de imagen
+• <a>               - Enlace envolvente a la imagen en resolución alta (Picsum)
+• <img>             - Imagen de sala de conferencias (200x130) con atributo alt
+• <figcaption>      - Descripción: "Sala principal del evento"
+
+TABLAS:
+• <table border="1"> - Tabla resumen del horario de las jornadas (lunes a viernes)
+• <caption>         - Título descriptivo: "Horario general de las jornadas..."
+• <thead>/<tbody>   - Estructuración de cabecera y cuerpo de tabla
+• <tr>/<th>/<td>    - Estructura de filas y celdas
+• <th rowspan="2">  - Encabezado combinado para la celda "Franja"
+• <th colspan="5">  - Encabezado combinado para la celda "Días"
+
+INTERACTIVIDAD NATIVA:
+• <details>/<summary> - Bloque desplegable con "Más información"
+
+
+─────────────────────────────────────────────────────────────────────────────
+                              LOGIN.HTML                                     
+                     (Inicio de sesión de usuarios)                          
+─────────────────────────────────────────────────────────────────────────────
+
+TÍTULO: Login - Jornadas de Ponencias y Empleo 2026 - Universidad Pablo de Olavide
+ELEMENTOS ESTRUCTURALES:
+• <header>          - Cabecera con <h1> y <h2>Login</h2>
+• <nav>             - Menú principal completo de 10 enlaces
+• <main>            - Contenedor del módulo de acceso
+• <section>         - Sección de autenticación (<h2>Iniciar sesión</h2>)
+• <aside>           - Panel lateral de ayuda para usuarios nuevos
+• <footer>          - Pie de página unificado
+
+FORMULARIO Y CONTROLES:
+• <form action="."> - Formulario de inicio de sesión
+• <input type="email"> - Campo de correo con placeholder, autofocus y required
+• <input type="password"> - Campo de contraseña con required
+• <input type="submit"> - Botón de envío con value="Entrar"
+
+INTERACTIVIDAD:
+• <details>/<summary> - Desplegable con aviso y enlace a inscripcion.html
+
+
+─────────────────────────────────────────────────────────────────────────────
+                            PROGRAMA.HTML                                   
+                  (Programa semanal de las jornadas)                         
+─────────────────────────────────────────────────────────────────────────────
+
+TÍTULO: Programa - Jornadas de Ponencias y Empleo 2026 - Universidad Pablo de Olavide
+ELEMENTOS ESTRUCTURALES:
+• <header>          - Cabecera institucional y <h2>Programa</h2>
+• <nav>             - Menú principal completo
+• <main>            - Contenedor del programa semanal
+• <section>         - Secciones temáticas:
+                      1. "Horario general" (tabla completa de lunes a viernes)
+                      2. "Información adicional" (enlaces a subapartados)
+• <footer>          - Pie institucional común
+
+TABLAS:
+• <table border="1" cellpadding="8" cellspacing="0"> - Cuadrícula semanal por días
+• <thead>/<tbody>   - Cabecera y cuerpo de datos
+• <tr>/<th>/<td>    - Celdas horarias, tipo de actividad y nombres de conferencias
+• <th rowspan="11">, <th rowspan="10">, <th rowspan="7"> - Agrupación por días
+
+
+─────────────────────────────────────────────────────────────────────────────
+                            ACTIVIDADES.HTML                                 
+                   (Portal matriz de actividades)                            
+─────────────────────────────────────────────────────────────────────────────
+
+TÍTULO: Actividades - Jornadas de Ponencias y Empleo 2026 - Universidad Pablo de Olavide
+ELEMENTOS ESTRUCTURALES:
+• <header>          - Cabecera con <h1> y <h2>Actividades</h2>
+• <nav>             - Menú principal completo de 10 enlaces
+• <main>            - Contenedor de las 3 grandes áreas de actividades:
+                      1. <section> Talleres (<h2>Talleres</h2>)
+                      2. <section> Deportes (<h2>Deportes</h2>)
+                      3. <section> Cultura (<h2>Cultura</h2>)
+• <footer>          - Pie institucional unificado
+
+TEXTO Y LISTAS:
+• <ul>/<ol>/<li>    - Listas combinadas y anidadas para categorías y disciplinas
+• <u>               - Subrayado semántico de categorías (Tecnología, Habilidades, etc.)
+
+IMÁGENES Y ENLACES:
+• <a>/<img>         - Imágenes locales normalizadas de 350px de ancho con enlaces:
+                      - imagenes/actividad-taller.jpg (Talleres)
+                      - imagenes/actividad-deportes.jpg (Deportes)
+                      - imagenes/actividad-cultura.jpg (Cultura)
+• Enlaces directos a talleres.html, deportes.html y cultura.html
+
+
+─────────────────────────────────────────────────────────────────────────────
+                              TALLERES.HTML                                   
+                     (Horarios y tabla de talleres)                          
+─────────────────────────────────────────────────────────────────────────────
+
+TÍTULO: Talleres - Jornadas de Ponencias y Empleo 2026 - Universidad Pablo de Olavide
+ELEMENTOS ESTRUCTURALES:
+• <header>          - Cabecera con <h1> y <h2>Talleres</h2>
+• <nav>             - Menú de actividades (Actividades, Talleres, Deportes, Cultura, Inicio)
+• <main>            - Horarios y tabla semanal de talleres
+• <footer>          - Pie institucional común
+
+TABLA SEMANAL DE TALLERES:
+• <table border="1" cellpadding="8" cellspacing="0"> - Tabla estructurada
+• <thead>           - Encabezados: Día, Categoría, Taller, Hora, Aula
+• <tbody>           - Filas organizadas de lunes a viernes:
+                      - LUNES: <th rowspan="4">, 3 talleres y comida conjunta
+                      - MARTES: <th rowspan="4">, incluye conferencia de Laura Martínez
+                      - MIÉRCOLES: <th rowspan="4">, talleres y comida conjunta
+                      - JUEVES: <th rowspan="4">, incluye conferencia de Carlos Fernández
+                      - VIERNES: <th rowspan="4">, talleres y comida conjunta
+
+
+─────────────────────────────────────────────────────────────────────────────
+                             DEPORTES.HTML                                   
+                     (Competiciones y torneos UPO)                           
+─────────────────────────────────────────────────────────────────────────────
+
+TÍTULO: Deportes - Jornadas de Ponencias y Empleo 2026 - Universidad Pablo de Olavide
+ELEMENTOS ESTRUCTURALES:
+• <header>          - Cabecera con <h1> y <h2>Deportes</h2>
+• <nav>             - Menú de actividades
+• <main>            - Tabla de instalaciones y deportes
+• <footer>          - Pie institucional común
+
+TABLA DEPORTIVA:
+• <table>           - Tabla con border="1", cellpadding="8" y cellspacing="0"
+• <thead>/<tbody>   - Columnas: Día, Categoría, Deporte, Hora, Instalación
+• <th>              - Filas agrupadas: LUNES Y MIÉRCOLES, MARTES Y JUEVES, VIERNES
+• <td>              - Celdas de deportes individuales y de equipo
+
+
+─────────────────────────────────────────────────────────────────────────────
+                               CULTURA.HTML                                   
+                     (Actividades culturales y ocio)                         
+─────────────────────────────────────────────────────────────────────────────
+
+TÍTULO: Cultura - Jornadas de Ponencias y Empleo 2026 - Universidad Pablo de Olavide
+ELEMENTOS ESTRUCTURALES:
+• <header>          - Cabecera con <h1> y <h2>Cultura</h2>
+• <nav>             - Menú de actividades
+• <main>            - Tabla semanal de actividades culturales
+• <footer>          - Pie institucional común
+
+TABLA CULTURAL:
+• <table>           - Tabla con border="1", cellpadding="8" y cellspacing="0"
+• <thead>/<tbody>   - Columnas: Categoría, Actividad, Día, Hora, Lugar
+• <th rowspan="3">  - Bloques de actividades por categorías (Patrimonio,
+                      Literatura y filosofía, Idiomas e interculturalidad)
+
+
+─────────────────────────────────────────────────────────────────────────────
+                              PONENTES.HTML                                  
+                     (Portal general de conferenciantes)                     
+─────────────────────────────────────────────────────────────────────────────
+
+TÍTULO: Ponentes - Jornadas de Ponencias y Empleo 2026 - Universidad Pablo de Olavide
+ELEMENTOS ESTRUCTURALES:
+• <header>          - Cabecera con <h1> y <h2>Ponentes</h2>
+• <nav>             - Menú principal completo de 10 enlaces
+• <main>            - Presentación de ponentes
+• <article>         - Ficha introductoria de cada ponente (Laura Martínez y Carlos Fernández)
+• <hr>              - Separador temático horizontal entre ponentes
+• <footer>          - Pie institucional común
+
+MULTIMEDIA:
+• <figure>/<a>/<img>/<figcaption> - Fotografías de ponentes (width="200") con enlaces:
+                      - imagenes/ponente-laura.jpg
+                      - imagenes/ponente-carlos.jpg
+• <a>               - Enlaces directos a ponente1.html y ponente2.html
+
+
+─────────────────────────────────────────────────────────────────────────────
+                              PONENTE1.HTML                                  
+                     (Ficha de Laura Martínez - IA)                          
+─────────────────────────────────────────────────────────────────────────────
+
+TÍTULO: Laura Martínez - Jornadas de Ponencias y Empleo 2026 - Universidad Pablo de Olavide
+ELEMENTOS ESTRUCTURALES:
+• <header>          - Cabecera institucional y <h2>Laura Martínez</h2>
+• <nav>             - Navegación específica de ponentes (Volver a ponentes, Carlos Fernández, Inicio)
+• <main>/<article>  - Ficha curricular y conferencia
+• <footer>          - Pie institucional común
+
+MULTIMEDIA Y DATOS TEMPORALES:
+• <figure>/<a>/<img>/<figcaption> - Fotografía en alta resolución (width="250"):
+                      imagenes/ponente-laura.jpg
+• <time>            - Fecha y hora semánticas:
+                      <time datetime="2026-11-10">Martes 10 de noviembre de 2026</time>
+                      <time datetime="10:30">10:30</time> - <time datetime="12:00">12:00</time>
+
+
+─────────────────────────────────────────────────────────────────────────────
+                              PONENTE2.HTML                                  
+                  (Ficha de Carlos Fernández - Seguridad)                    
+─────────────────────────────────────────────────────────────────────────────
+
+TÍTULO: Carlos Fernández - Jornadas de Ponencias y Empleo 2026 - Universidad Pablo de Olavide
+ELEMENTOS ESTRUCTURALES:
+• <header>          - Cabecera institucional y <h2>Carlos Fernández</h2>
+• <nav>             - Navegación de ponentes (Volver a ponentes, Laura Martínez, Inicio)
+• <main>/<article>  - Ficha curricular y conferencia
+• <footer>          - Pie institucional común
+
+MULTIMEDIA Y DATOS TEMPORALES:
+• <figure>/<a>/<img>/<figcaption> - Fotografía de ponente (width="250"):
+                      imagenes/ponente-carlos.jpg
+• <time>            - Fecha y hora de ponencia:
+                      <time datetime="2026-11-12">Jueves 12 de noviembre de 2026</time>
+                      <time datetime="09:00">9:00</time> - <time datetime="10:30">10:30</time>
+• <details>/<summary> - Preguntas frecuentes sobre el público objetivo
+
+
+─────────────────────────────────────────────────────────────────────────────
+                            ASOCIACIONES.HTML                                
+                     (Colectivos y asociaciones)                             
+─────────────────────────────────────────────────────────────────────────────
+
+TÍTULO: Asociaciones - Jornadas de Ponencias y Empleo 2026 - Universidad Pablo de Olavide
+ELEMENTOS ESTRUCTURALES:
+• <header>          - Cabecera con <h1> y <h2>Asociaciones</h2>
+• <nav>             - Menú principal completo de 10 enlaces
+• <main>            - 3 secciones completas de colectivos:
+                      1. Asociación de Programación
+                      2. Asociación de Robótica
+                      3. Asociación de Videojuegos
+• <footer>          - Pie institucional común
+
+MULTIMEDIA:
+• <a>/<img>         - Imágenes locales de 350px de ancho con enlaces:
+                      - imagenes/asociacion-programacion.jpg
+                      - imagenes/asociacion-robotica.jpg
+                      - imagenes/asociacion-videojuegos.jpg
+
+
+─────────────────────────────────────────────────────────────────────────────
+                             MULTIMEDIA.HTML                                 
+                    (Contenido audiovisual del evento)                       
+─────────────────────────────────────────────────────────────────────────────
+
+TÍTULO: Multimedia - Jornadas de Ponencias y Empleo 2026 - Universidad Pablo de Olavide
+ELEMENTOS ESTRUCTURALES:
+• <header>          - Cabecera con <h1> y <h2>Multimedia</h2>
+• <nav>             - Menú principal completo de 10 enlaces
+• <main>            - Contenedor con secciones de vídeo y audio
+• <footer>          - Pie institucional común
+
+REPRODUCTORES NATIVOS HTML5:
+• <video>           - Reproductor de vídeo con controles (controls) y ancho de 640px
+• <audio>           - Reproductor de audio con controles (controls)
+• <source>          - Declaración de fuentes de medios (video/mp4 y audio/ogg)
+• Mensajes alternativos de reserva para navegadores sin soporte multimedia
+
+
+─────────────────────────────────────────────────────────────────────────────
+                            INSCRIPCION.HTML                                 
+                     (Formulario de inscripción)                             
+─────────────────────────────────────────────────────────────────────────────
+
+TÍTULO: Inscripción - Jornadas de Ponencias y Empleo 2026 - Universidad Pablo de Olavide
+ELEMENTOS ESTRUCTURALES:
+• <header>          - Cabecera con <h1> y <h2>Inscripción</h2>
+• <nav>             - Menú principal completo de 10 enlaces
+• <main>            - Contenedor del formulario y tarifas
+• <footer>          - Pie institucional común
+
+FORMULARIO PRINCIPAL:
+• <form>            - Con atributos method="post" y enctype="multipart/form-data"
+• <fieldset>/<legend> - 4 bloques lógicos:
+                      1. Datos personales
+                      2. Perfil del participante (UPO, otra institución, empresa)
+                      3. Actividad a la que se inscribe
+                      4. Confirmación y envío
+• <input>           - Gran diversidad de tipos HTML5:
+                      - text (nombre, apellidos, centro)
+                      - email, tel (con pattern), url
+                      - date (fecha de nacimiento con min y max)
+                      - color (insignia personalizada)
+                      - file (foto para acreditación, accept y multiple)
+                      - radio (perfil del asistente)
+                      - checkbox (ámbitos de interés y aceptación RGPD)
+                      - submit y reset
+• <select>/<optgroup>/<option> - Selector estructurado por áreas temáticas
+• <mark>/<small>    - Indicadores de obligatoriedad y notas de formato
+
+TABLA DE TARIFAS Y MEDIDORES:
+• <table border="1"> - Tarifas según perfil y actividades
+• <progress>        - Barra de avance del aforo global de las jornadas
+• <meter>           - Indicadores de plazas disponibles por ámbito
+
+
+─────────────────────────────────────────────────────────────────────────────
+                              CONTACTO.HTML                                  
+                     (Formulario de atención y sede)                         
+─────────────────────────────────────────────────────────────────────────────
+
+TÍTULO: Contacto - Jornadas de Ponencias y Empleo 2026 - Universidad Pablo de Olavide
+ELEMENTOS ESTRUCTURALES:
+• <header>          - Cabecera institucional y <h2>Contacto</h2>
+• <nav>             - Menú principal completo de 10 enlaces
+• <main>            - Formulario, directorio institucional y medios de contacto
+• <footer>          - Pie institucional común
+
+FORMULARIO DE CONTACTO:
+• <form>            - Formulario con campos name, email, tel, asunto (search con datalist)
+• <datalist>        - Sugerencias automáticas de asunto
+• <textarea>        - Mensaje con minlength, maxlength y placeholder
+• <output>          - Etiqueta semántica de estado del formulario
+
+INFORMACIÓN INSTITUCIONAL:
+• <table border="1"> - Directorio de delegados y coordinadores por área
+• <address>         - Datos oficiales de secretaría, teléfono y correo
+• <menu>            - Lista semántica de acciones rápidas con mailto directo
+• <bdi>             - Aislamiento bidireccional para nombres internacionales
+• <wbr>             - Separación sugerida de palabras largas en enlaces
+
+
+─────────────────────────────────────────────────────────────────────────────
+                              NOTICIAS.HTML                                  
+                     (Portal de actualidad y prensa)                         
+─────────────────────────────────────────────────────────────────────────────
+
+TÍTULO: Noticias - Jornadas de Ponencias y Empleo 2026 - Universidad Pablo de Olavide
+ELEMENTOS ESTRUCTURALES:
+• <header>          - Cabecera con <h1> y <h2>Noticias</h2>
+• <nav>             - Menú principal completo de 10 enlaces
+• <main>            - Resumen de noticias mediante artículos <article>
+• <footer>          - Pie institucional común
+
+ARTÍCULOS Y MULTIMEDIA:
+• <article>         - Noticias con título enlazado, fecha (<time>) y entradilla
+• <figure>/<img>/<figcaption> - Vistas previas de imágenes normalizadas:
+                      - imagenes/noticia-dron.jpg
+                      - imagenes/noticia-diabetes.jpg
+
+
+─────────────────────────────────────────────────────────────────────────────
+                              NOTICIA1.HTML                                  
+                       (Drones autónomos e IA)                               
+─────────────────────────────────────────────────────────────────────────────
+
+TÍTULO: IA en Drones - Jornadas de Ponencias y Empleo 2026 - Universidad Pablo de Olavide
+ELEMENTOS ESTRUCTURALES:
+• <header>          - Cabecera institucional y título de la noticia
+• <nav>             - Menú de noticias (retorno, siguiente noticia, fuente UPM, Inicio)
+• <main>/<article>  - Texto periodístico dividido en secciones temáticas
+• <footer>          - Pie institucional común
+
+MULTIMEDIA Y TABLA:
+• <figure>/<img>/<figcaption> - Imagen del dron (imagenes/noticia-dron.jpg)
+• <table border="1"> - Tabla comparativa técnica entre control tradicional e IA
+
+
+─────────────────────────────────────────────────────────────────────────────
+                              NOTICIA2.HTML                                  
+                       (Glucómetro Glucube - US)                             
+─────────────────────────────────────────────────────────────────────────────
+
+TÍTULO: Medidor de Glucosa - Jornadas de Ponencias y Empleo 2026 - Universidad Pablo de Olavide
+ELEMENTOS ESTRUCTURALES:
+• <header>          - Cabecera institucional y título de la noticia
+• <nav>             - Menú de noticias (retorno, noticia anterior, fuente US, Inicio)
+• <main>/<article>  - Reportaje dividido en secciones temáticas
+• <footer>          - Pie institucional común
+
+MULTIMEDIA Y TABLA:
+• <figure>/<img>/<figcaption> - Imagen del dispositivo (imagenes/noticia-diabetes.jpg)
+• <table border="1"> - Tabla comparativa clínica entre método tradicional e innovador
+
+================================================================================
+                            ARCHIVOS DEL PROYECTO (equipo06-v2)
+================================================================================
+
+El directorio equipo06-v2 contiene los 17 archivos HTML estructurados según las
+directrices oficiales de entrega, la carpeta de imágenes normalizada y la
+documentación técnica:
+
+PÁGINAS PRINCIPALES:
+• index.html        - Portada de bienvenida, mapa general y horario semanal completo
+• login.html        - Formulario de inicio de sesión con menú completo
+• programa.html     - Horario semanal coordinado (de lunes a viernes)
+• actividades.html  - Portal matriz con enlaces a talleres, deportes y cultura
+• ponentes.html     - Presentación general de ponentes con enlaces individuales
+• asociaciones.html - Colectivos estudiantiles (Programación, Robótica y Videojuegos)
+• multimedia.html   - Contenido audiovisual con reproductores nativos HTML5
+• inscripcion.html  - Formulario de inscripción, tarifas y medidores de plazas
+• contacto.html     - Formulario de atención, directorio y enlace directo mailto
+• noticias.html     - Portal de prensa con vista previa de artículos
+
+SUBPÁGINAS DE ACTIVIDADES:
+• talleres.html     - Horario semanal detallado de talleres (incluye ponencias)
+• deportes.html     - Calendario de torneos e instalaciones deportivas
+• cultura.html      - Tabla semanal de actividades culturales y patrimoniales
+
+SUBPÁGINAS DE PONENTES:
+• ponente1.html     - Ficha curricular y conferencia de Laura Martínez (IA)
+• ponente2.html     - Ficha curricular y conferencia de Carlos Fernández (Ciberseguridad)
+
+SUBPÁGINAS DE NOTICIAS:
+• noticia1.html     - Reportaje sobre drones autónomos e IA (investigación UPM)
+• noticia2.html     - Reportaje sobre el glucómetro Glucube (US / IBIS)
+
+DOCUMENTACIÓN Y RECURSOS:
+• leeme.txt         - Este documento técnico adaptado a equipo06-v2
+• imagenes/         - Directorio con todos los recursos gráficos normalizados
+• comprimidos/      - Archivo de respaldo de los paquetes originales recibidos
