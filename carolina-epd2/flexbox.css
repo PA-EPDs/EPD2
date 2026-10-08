@@ -1,0 +1,37 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 8 oct 2026, 12:28:10
+    Author     : Carolina
+*/
+/* Diseño de tres columnas con Flexbox */
+
+.contenedor-flex {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+/* Columna izquierda */
+.contenedor-flex > nav {
+    float: none;
+    width: 20%;
+    min-height: 750px;
+}
+
+/* Columna central */
+.contenedor-flex > main {
+    float: none;
+    width: 55%;
+    min-height: 750px;
+}
+
+/* Columna derecha*/
+.contenedor-flex > aside {
+    float: none;
+    width: 25%;
+    min-height: 750px;
+}
+
