@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Inicio</title>
+    <style>
+/* ===== Estilos comunes ===== */
+* { box-sizing: border-box; }
+
+html { background-color: #f2f2f2; }
+
+/* Diseno fijo: la pagina mide siempre 960px */
+body {
+    width: 960px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #222222;
+    box-shadow: 0 0 10px #999999;
+}
+
+header {
+    background-color: #1f4e79;
+    padding: 20px 15px;
+    text-align: center;
+    border-bottom: 4px solid #163a5c;
+}
+header h1 {
+    margin: 0;
+    padding: 6px 0;
+    font-size: 26px;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+}
+header p {
+    margin: 4px 0 0 0;
+    font-size: 18px;
+    color: #d9e8f5;
+    text-transform: uppercase;
+}
+
+/* Menu superior horizontal */
+nav {
+    background-color: #d9e8f5;
+    padding: 12px 16px;
+    border-bottom: 1px solid #b5d1ea;
+}
+nav h2 {
+    margin: 0 0 8px 0;
+    font-size: 13px;
+    color: #1f4e79;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+}
+nav ul::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+nav li {
+    float: left;
+}
+nav li:not(:last-child) {
+    margin-right: 0;
+}
+nav li:first-child a {
+    font-weight: bold;
+}
+nav a {
+    display: block;
+    padding: 7px 11px;
+    border: 1px solid #1f4e79;
+    border-radius: 4px;
+    background-color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+nav a:link, nav a:visited {
+    color: #1f4e79;
+}
+nav a:hover {
+    background-color: #1f4e79;
+    color: #ffffff;
+}
+nav a:active {
+    background-color: #163a5c;
+    color: #ffffff;
+}
+
+/* Enlaces del contenido */
+a:link { color: #1f4e79; }
+a:visited { color: #5b4b73; }
+a:hover { color: #b04a00; text-decoration: underline; }
+a:active { color: #8a0000; }
+
+h2 { color: #1f4e79; }
+
+/* Pie de pagina */
+footer {
+    background-color: #1f4e79;
+    color: #ffffff;
+    padding: 16px;
+    margin-top: 25px;
+    text-align: center;
+    border-top: 4px solid #163a5c;
+}
+footer p { margin: 0; font-size: 14px; letter-spacing: 0.5px; }
+
+/* ===== Estilos de index ===== */
+article { padding: 10px 20px; }
+article h2 {
+    border-bottom: 2px solid #1f4e79;
+    padding-bottom: 5px;
+}
+article h3 { color: #1f4e79; }
+article ul { list-style-type: square; }
+article ol { list-style-type: decimal-leading-zero; }
+
+figure {
+    width: 240px;
+    margin: 15px 0;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+figure img {
+    border: 3px solid #ffffff;
+    box-shadow: 2px 2px 6px #888888;
+}
+figcaption {
+    margin-top: 8px;
+    font-size: 14px;
+    font-style: italic;
+    color: #555555;
+}
+
+table {
+    width: 100%;
+    margin: 10px 0;
+    border-collapse: collapse;
+}
+caption {
+    padding: 8px;
+    font-weight: bold;
+    color: #1f4e79;
+}
+th, td {
+    padding: 8px;
+    border: 1px solid #1f4e79;
+    text-align: center;
+}
+th {
+    background-color: #1f4e79;
+    color: #ffffff;
+}
+tr:nth-child(even) td { background-color: #d9e8f5; }
+
+details {
+    margin: 15px 0;
+    padding: 8px 12px;
+    border: 1px solid #1f4e79;
+    border-radius: 6px;
+    background-color: #f2f2f2;
+}
+summary {
+    font-weight: bold;
+    color: #1f4e79;
+    cursor: pointer;
+}
+summary:hover { color: #102d47; }
+
+aside {
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #d9e8f5;
+    border: 1px solid #1f4e79;
+    border-radius: 6px;
+}
+aside h3 { margin-top: 0; color: #1f4e79; }
+
+/* Menu inferior (footer) */
+footer ul {
+    list-style: none;
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+footer li {
+    display: inline;
+    padding: 0 10px;
+}
+footer li:not(:last-child) { border-right: 1px solid #d9e8f5; }
+footer a:link, footer a:visited {
+    color: #ffffff;
+    text-decoration: none;
+}
+footer a:hover { color: #d9e8f5; text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header>
+        <hgroup>
+            <h1>Jornadas de Ponencias y Empleo 2026 - Universidad Pablo de Olavide</h1>
+            <p>Inicio</p>
+        </hgroup>
+    </header>
+
+    <nav>
+        <h2>MEN&Uacute; PRINCIPAL</h2>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="programa.html">Programa</a></li>
+            <li><a href="actividades.html">Actividades</a></li>
+            <li><a href="ponentes.html">Ponentes</a></li>
+            <li><a href="asociaciones.html">Asociaciones</a></li>
+            <li><a href="multimedia.html">Multimedia</a></li>
+            <li><a href="inscripcion.html">Inscripci&oacute;n</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+        </ul>
+    </nav>
+
+    <article>
+        <h2>Bienvenido</h2>
+        <p>Estas jornadas re&uacute;nen a estudiantes, profesores, ponentes y empresas.</p>
+
+        <figure>
+            <a href="https://picsum.photos/id/1067/1200/800">
+                <img src="https://picsum.photos/id/1067/200/130" alt="Sala de conferencias">
+            </a>
+            <figcaption>Sala principal del evento</figcaption>
+        </figure>
+
+        <section>
+            <h3>Qu&eacute; habr&aacute;</h3>
+            <ul>
+                <li>Ponencias
+                    <ul>
+                        <li>Inteligencia artificial</li>
+                        <li>Desarrollo web</li>
+                    </ul>
+                </li>
+                <li>Actividades
+                    <ul>
+                        <li>Talleres</li>
+                        <li>Deportes</li>
+                        <li>Cultura</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>C&oacute;mo participar</h3>
+            <ol>
+                <li>Inscribirse</li>
+                <li>Entrar con tu cuenta</li>
+                <li>Mirar el programa</li>
+            </ol>
+        </section>
+
+        <section>
+            <h3>Horario</h3>
+            <table>
+                <caption>Horario de las jornadas (de lunes a viernes)</caption>
+                <tr>
+                    <th rowspan="2">Franja</th>
+                    <th colspan="5">D&iacute;as</th>
+                </tr>
+                <tr>
+                    <th>Lunes</th>
+                    <th>Martes</th>
+                    <th>Mi&eacute;rcoles</th>
+                    <th>Jueves</th>
+                    <th>Viernes</th>
+                </tr>
+                <tr>
+                    <th>Ma&ntilde;ana</th>
+                    <td>Ponencias</td>
+                    <td>Ponencias</td>
+                    <td>Talleres</td>
+                    <td>Ponencias</td>
+                    <td>Talleres</td>
+                </tr>
+                <tr>
+                    <th>Tarde</th>
+                    <td colspan="2">Feria de empleo</td>
+                    <td>Deportes</td>
+                    <td>Cultura</td>
+                    <td>Clausura</td>
+                </tr>
+            </table>
+        </section>
+
+        <details>
+            <summary>M&aacute;s informaci&oacute;n</summary>
+            <p>La entrada es gratuita.</p>
+        </details>
+    </article>
+
+    <aside>
+        <h3>Enlaces r&aacute;pidos</h3>
+        <ul>
+            <li><a href="ponentes.html">Ponentes</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </aside>
+
+    <footer>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="programa.html">Programa</a></li>
+            <li><a href="ponentes.html">Ponentes</a></li>
+            <li><a href="inscripcion.html">Inscripci&oacute;n</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+        </ul>
+        <p>Jornadas de Ponencias y Empleo 2026</p>
+    </footer>
+</body>
+</html>

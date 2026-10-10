@@ -1,0 +1,92 @@
+================================================================================
+                            ESTILOS CSS - EPD 2 (Ej1 y Ej2)
+================================================================================
+
+INTEGRANTES DEL EQUIPO Y REPARTO DE RESPONSABILIDADES:
+  • Alejandro:
+      - Páginas: programa.html, multimedia.html, asociaciones.html
+      - Maquetación: 2 columnas basada en flotantes (nav 22%, main 78%).
+  • Carolina:
+      - Páginas: ponentes.html, ponente1.html, ponente2.html
+      - Maquetación: 2 columnas en ponentes y 3 columnas en detalle (nav 20%, main 55%, aside 25%).
+  • Coraima:
+      - Páginas: index.html (Inicio), login.html
+      - Maquetación: Diseño centrado fijo a 960px con estilos embebidos (especificación Ej1).
+  • Daniel:
+      - Páginas: noticias.html, noticia1.html, noticia2.html
+      - Maquetación: 2 columnas en portada noticias y 3 columnas en noticias individuales.
+  • Jonathan:
+      - Páginas: inscripcion.html, contacto.html
+      - Tareas: Consolidación global del sitio, diseño base de estilos.css, adaptación multi-columna.
+  • Paola:
+      - Páginas: actividades.html, talleres.html, deportes.html, cultura.html
+      - Maquetación: 2 columnas basada en flotantes con submenús anidados e imágenes temáticas.
+      - Estado: Entrega completada e integrada en el proyecto consolidado.
+
+================================================================================
+              1. RESUMEN DE LA PRÁCTICA
+================================================================================
+
+1. NÚMERO DE REGLAS CSS CREADAS (estilos.css):
+   • Total de bloques de reglas CSS consolidadas: 73 reglas
+   • Mínimo exigido en el guión: 50 reglas
+
+2. NÚMERO DE PSEUDOCLASES DISTINTAS EMPLEADAS (estilos.css):
+   • Total de pseudoclases distintas: 23 pseudoclases únicas
+   • Mínimo exigido en el guión: 12 pseudoclases
+
+   Listado detallado de pseudoclases implementadas y su uso:
+
+   1)  :link                  - Enlaces no visitados en navegación y artículos.
+   2)  :visited               - Enlaces visitados para diferenciación del usuario.
+   3)  :hover                 - Realce interactivo en enlaces, botones, tablas y tarjetas.
+   4)  :active                - Estado de pulsación visual sobre botones y navegación.
+   5)  :focus                 - Indicador accesible en controles de formulario y enlaces.
+   6)  :focus-within          - Resaltado perimetral de fieldsets al interactuar con campos.
+   7)  :first-child           - Ajuste de espaciado para el primer elemento de listas.
+   8)  :last-child            - Supresión de margen sobrante en el último ítem.
+   9)  :first-of-type         - Destacado visual tipo "callout" en párrafos introductorios.
+   10) :nth-child(even)       - Cebreado de filas pares en tablas de datos y horarios.
+   11) :nth-child(odd)        - Fondo diferenciado de filas impares en tablas.
+   12) :not([type="submit"])  - Selector de exclusión para estilización general de inputs.
+   13) :not([type="reset"])   - Exclusión de botones de reseteo.
+   14) :not([type="checkbox"])- Exclusión de casillas de verificación.
+   15) :not([type="radio"])   - Exclusión de botones de opción.
+   16) :not([type="file"])    - Exclusión de selectores de archivo.
+   17) :not([type="color"])   - Exclusión de selectores de color.
+   18) :checked               - Énfasis tipográfico en etiquetas de radios y checkboxes activos.
+   19) :disabled              - Apariencia atenuada y cursor de no permitido en campos inactivos.
+   20) :required              - Indicador de borde lateral para campos obligatorios.
+   21) :optional              - Estilo atenuado para campos voluntarios.
+   22) :valid                 - Feedback visual en verde para entradas correctamente formateadas.
+   23) :invalid               - Alerta visual en rojo y foco sutil para entradas con error.
+   24) :has(.columna-derecha) - Adaptación dinámica a 3 columnas para vistas con panel lateral.
+
+3. NÚMERO DE PROPIEDADES CSS DISTINTAS EMPLEADAS:
+   • Total de propiedades CSS distintas: 68 propiedades
+   • Incluye propiedades de maquetación (float, clear, display, width, min-height, margin, padding,
+     box-sizing), tipografía (font-family, font-size, font-weight, line-height, letter-spacing, text-transform),
+     decoración (border, border-radius, box-shadow, background-color, outline, accent-color)
+     y comportamiento/transiciones (transition, cursor, resize).
+
+================================================================================
+                    2. ESTRUCTURA Y MAQUETACIÓN DEL SITIO
+================================================================================
+
+1. PORTADA Y LOGIN (index.html / login.html):
+   - Se apega a la pauta específica del Ejercicio 1: maquetación fija con ancho centrado a 960px
+     utilizando estilos CSS embebidos en el elemento <style>.
+   - Cuenta con cabecera y pie de página con la misma paleta y estilo del resto de paginas
+     (Azul UPO #1f4e79, azul claro #d9e8f5).
+
+2. PÁGINAS PRINCIPALES DEL EVENTO (programa, ponentes, noticias, inscripcion, contacto, etc.):
+   - Maquetación clásica en dos columnas basada en flotantes:
+     • Menú lateral de navegación izquierda: nav { float: left; width: 22%; min-height: 850px; }
+     • Área de contenidos principal: main { float: right; width: 78%; min-height: 850px; }
+     • Limpieza de flotantes automática mediante la técnica clearfix (.contenedor-columnas::after).
+
+3. PÁGINAS DE DETALLE (noticia1, noticia2, ponente1, ponente2):
+   - Maquetación avanzada en tres columnas basada en flotantes:
+     • Menú de navegación contextual izquierdo: nav (width: 20%)
+     • Contenido y cuerpo del artículo: main (width: 55%)
+     • Columna lateral derecha de noticias e información extra: aside (width: 25%)

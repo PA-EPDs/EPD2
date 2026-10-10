@@ -1,0 +1,803 @@
+/* ==========================================================================
+   ESTILOS GENERALES Y RESET BÁSICO (CSS3)
+   Jornadas de Ponencias y Empleo 2026 - Universidad Pablo de Olavide
+   Equipo 06 - Jonathan Quishpe
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    color: #222222;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   CABECERA INSTITUCIONAL
+   ========================================================================== */
+
+header {
+    width: 100%;
+    background-color: #1f4e79;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 15px;
+    border-bottom: 4px solid #163a5c;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+    margin: 0;
+    padding: 6px 0;
+    font-size: 28px;
+    letter-spacing: 0.5px;
+}
+
+header h2 {
+    margin: 4px 0 0 0;
+    font-size: 20px;
+    font-weight: normal;
+    color: #d9e8f5;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   CONTENEDOR DE COLUMNAS (MAQUETACIÓN CLÁSICA CON FLOAT)
+   ========================================================================== */
+
+.contenedor-columnas {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Limpieza de floats con técnica clearfix */
+.contenedor-columnas::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* ==========================================================================
+   COLUMNA IZQUIERDA: MENÚ LATERAL (NAV)
+   ========================================================================== */
+
+nav {
+    float: left;
+    width: 22%;
+    min-height: 850px;
+    background-color: #d9e8f5;
+    padding: 20px 15px;
+    border-right: 1px solid #b5d1ea;
+}
+
+nav h2,
+nav h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #1f4e79;
+    font-size: 18px;
+    text-align: center;
+    border-bottom: 2px solid #1f4e79;
+    padding-bottom: 8px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav li {
+    margin-bottom: 8px;
+}
+
+nav a {
+    display: block;
+    padding: 10px 12px;
+    border: 1px solid #1f4e79;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: #ffffff;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+nav a:link {
+    color: #1f4e79;
+}
+
+nav a:visited {
+    color: #555555;
+}
+
+nav a:hover {
+    background-color: #1f4e79;
+    color: #ffffff;
+}
+
+nav a:active {
+    background-color: #163a5c;
+    color: #ffffff;
+}
+
+nav a:focus {
+    outline: 2px solid #b04a00;
+    background-color: #ffffff;
+    color: #1f4e79;
+}
+
+nav a.activo {
+    background-color: #1f4e79;
+    color: #ffffff;
+    border-left: 6px solid #b04a00;
+}
+
+/* Submenú de secciones hijas en la página activa */
+nav .submenu {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    padding-left: 12px;
+}
+
+nav .submenu li {
+    margin-bottom: 4px;
+}
+
+nav .submenu a {
+    font-size: 13px;
+    font-weight: normal;
+    padding: 6px 10px;
+    background-color: #f7fbff;
+    border: 1px dashed #7aa2c7;
+}
+
+nav .submenu a:hover {
+    background-color: #e2eefa;
+    color: #1f4e79;
+}
+
+/* Pseudoclases de posición */
+nav > ul > li:first-child {
+    margin-top: 6px;
+}
+
+nav > ul > li:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
+   COLUMNA DERECHA: CONTENIDO PRINCIPAL (MAIN)
+   ========================================================================== */
+
+main {
+    float: right;
+    width: 78%;
+    min-height: 850px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-left: 1px solid #e0e0e0;
+}
+
+main > p,
+article > p {
+    line-height: 1.6;
+    color: #333333;
+}
+
+main > p:first-of-type {
+    margin-top: 0;
+    padding: 12px 15px;
+    background-color: #eef5fb;
+    border-left: 4px solid #1f4e79;
+    border-radius: 0 4px 4px 0;
+}
+
+/* ==========================================================================
+   ARTÍCULOS Y SECCIONES
+   ========================================================================== */
+
+article,
+section {
+    margin-bottom: 30px;
+    padding: 20px 24px;
+    border: 1px solid #d5d5d5;
+    background-color: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+section h2,
+article h2 {
+    margin-top: 0;
+    color: #1f4e79;
+    font-size: 22px;
+    border-bottom: 2px solid #1f4e79;
+    padding-bottom: 8px;
+}
+
+section h3,
+article h3 {
+    color: #163a5c;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* ==========================================================================
+   ENLACES EN EL CONTENIDO
+   ========================================================================== */
+
+main a:link {
+    color: #1f4e79;
+    text-decoration: underline;
+}
+
+main a:visited {
+    color: #5b4b73;
+}
+
+main a:hover {
+    color: #b04a00;
+    text-decoration: none;
+}
+
+main a:active {
+    color: #8a0000;
+}
+
+main a:focus {
+    outline: 2px solid #1f4e79;
+}
+
+/* ==========================================================================
+   ELEMENTOS DE TEXTO Y DETALLES TIPOGRÁFICOS
+   ========================================================================== */
+
+mark {
+    background-color: #ffeaa7;
+    color: #c0392b;
+    font-weight: bold;
+    padding: 1px 4px;
+    border-radius: 3px;
+}
+
+small {
+    color: #666666;
+    font-size: 12px;
+    display: inline-block;
+    margin-top: 4px;
+}
+
+strong {
+    color: #1f4e79;
+}
+
+time,
+data {
+    font-weight: bold;
+    color: #163a5c;
+}
+
+bdi {
+    font-style: italic;
+    color: #2c3e50;
+}
+
+address {
+    font-style: normal;
+    background-color: #f7f9fb;
+    padding: 15px;
+    border-left: 3px solid #1f4e79;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+address p {
+    margin: 6px 0;
+}
+
+/* ==========================================================================
+   MULTIMEDIA Y FIGURAS
+   ========================================================================== */
+
+figure {
+    margin: 20px auto;
+    padding: 12px;
+    background-color: #f9f9f9;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    text-align: center;
+    max-width: 440px;
+}
+
+figure a {
+    display: inline-block;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid #888888;
+    border-radius: 4px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+figure img:hover {
+    border-color: #1f4e79;
+    transform: scale(1.02);
+}
+
+figcaption {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #555555;
+    font-style: italic;
+}
+
+/* ==========================================================================
+   TABLAS ESTILIZADAS
+   ========================================================================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border: 1px solid #777777;
+}
+
+caption {
+    padding: 12px;
+    color: #1f4e79;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: left;
+    background-color: #eef5fb;
+    border: 1px solid #d5d5d5;
+    border-bottom: none;
+    border-radius: 4px 4px 0 0;
+}
+
+th,
+td {
+    padding: 10px 12px;
+    border: 1px solid #777777;
+    font-size: 14px;
+}
+
+thead th {
+    background-color: #1f4e79;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+}
+
+th[scope="row"],
+th[scope="rowgroup"] {
+    background-color: #eaf1f7;
+    color: #1f4e79;
+    text-align: left;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9fbfd;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+tbody tr:hover {
+    background-color: #eaf3fb;
+}
+
+/* ==========================================================================
+   FORMULARIOS Y CONTROLES (COMPLETAMENTE PERSONALIZADOS)
+   ========================================================================== */
+
+form {
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+fieldset {
+    margin-bottom: 20px;
+    padding: 18px 20px;
+    border: 1px solid #b5d1ea;
+    border-radius: 6px;
+    background-color: #fafbfc;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+fieldset:focus-within {
+    border-color: #1f4e79;
+    box-shadow: 0 0 6px rgba(31, 78, 121, 0.25);
+    background-color: #ffffff;
+}
+
+legend {
+    padding: 4px 12px;
+    color: #1f4e79;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #d9e8f5;
+    border: 1px solid #b5d1ea;
+    border-radius: 4px;
+}
+
+form div {
+    margin-bottom: 14px;
+}
+
+form div:last-child {
+    margin-bottom: 6px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+label:hover {
+    color: #1f4e79;
+}
+
+/* Campos de entrada generales */
+input:not([type="submit"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]):not([type="color"]):not([type="file"]),
+select,
+textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 9px 12px;
+    font-size: 14px;
+    font-family: inherit;
+    border: 1px solid #999999;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #222222;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #1f4e79;
+    box-shadow: 0 0 5px rgba(31, 78, 121, 0.4);
+    background-color: #ffffff;
+}
+
+/* Pseudoclases de validación y estado de inputs */
+input:required,
+textarea:required,
+select:required {
+    border-left: 3px solid #1f4e79;
+}
+
+input:optional {
+    border-left: 3px solid #888888;
+}
+
+input:disabled,
+select:disabled,
+option:disabled {
+    background-color: #eaeaea;
+    color: #888888;
+    cursor: not-allowed;
+    border-color: #cccccc;
+}
+
+input:valid:not([type="submit"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]) {
+    border-left-color: #27ae60;
+}
+
+input:invalid:not([type="submit"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]):focus {
+    border-color: #c0392b;
+    box-shadow: 0 0 5px rgba(192, 57, 43, 0.4);
+}
+
+/* Radio buttons y Checkboxes */
+input[type="radio"],
+input[type="checkbox"] {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 6px;
+    cursor: pointer;
+    accent-color: #1f4e79;
+}
+
+/* Inline labels para radios y checkboxes */
+form div span {
+    display: block;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    display: inline-block;
+    margin-right: 18px;
+    font-weight: normal;
+    font-size: 14px;
+    color: #333333;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked + label,
+input[type="checkbox"]:checked + label {
+    font-weight: bold;
+    color: #1f4e79;
+}
+
+/* Input Color */
+input[type="color"] {
+    width: 60px;
+    height: 36px;
+    padding: 2px;
+    border: 1px solid #777777;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+/* Input File */
+input[type="file"] {
+    display: block;
+    padding: 6px;
+    font-size: 13px;
+    border: 1px dashed #7aa2c7;
+    background-color: #f7fbff;
+    border-radius: 4px;
+    max-width: 500px;
+    cursor: pointer;
+}
+
+/* Select, optgroup y opciones */
+select {
+    cursor: pointer;
+}
+
+optgroup {
+    font-weight: bold;
+    color: #1f4e79;
+    background-color: #f0f5fa;
+}
+
+option {
+    font-weight: normal;
+    color: #222222;
+    background-color: #ffffff;
+    padding: 4px;
+}
+
+/* Textarea */
+textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+/* Botones de acción */
+input[type="submit"],
+input[type="reset"] {
+    display: inline-block;
+    padding: 10px 22px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 12px;
+    margin-top: 10px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+input[type="submit"] {
+    background-color: #1f4e79;
+    color: #ffffff;
+    border: 1px solid #163a5c;
+}
+
+input[type="submit"]:hover {
+    background-color: #163a5c;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+input[type="submit"]:active {
+    background-color: #0f2840;
+    transform: translateY(1px);
+}
+
+input[type="reset"] {
+    background-color: #e0e0e0;
+    color: #333333;
+    border: 1px solid #999999;
+}
+
+input[type="reset"]:hover {
+    background-color: #cccccc;
+    color: #111111;
+}
+
+input[type="reset"]:active {
+    background-color: #bbbbbb;
+    transform: translateY(1px);
+}
+
+/* Output semántico */
+output {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 12px;
+    background-color: #eef5fb;
+    border: 1px solid #b5d1ea;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #1f4e79;
+    font-style: italic;
+}
+
+/* ==========================================================================
+   BARRAS DE PROGRESO Y MEDIDORES (HTML5)
+   ========================================================================== */
+
+progress,
+meter {
+    width: 100%;
+    max-width: 350px;
+    height: 22px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 8px;
+    accent-color: #1f4e79;
+}
+
+/* ==========================================================================
+   PIE DE PÁGINA (FOOTER)
+   ========================================================================== */
+
+footer {
+    clear: both;
+    width: 100%;
+    background-color: #1f4e79;
+    color: #ffffff;
+    text-align: center;
+    padding: 16px;
+    border-top: 4px solid #163a5c;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   INTEGRACIÓN Y COMPATIBILIDAD CON COMPONENTES DE PONENTES Y NOTICIAS
+   (Consolidación Equipo 06: Carolina, Dani y Ale)
+   ========================================================================== */
+
+/* Envoltorio genérico para filas multicolumna */
+.dos-columnas,
+.contenedor {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.dos-columnas::after,
+.contenedor::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Ponentes: vista general con 2 columnas internas (50% / 50%) */
+.ponente-izquierda,
+.ponente-derecha {
+    float: left;
+    width: 48%;
+    margin: 1%;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #d5d5d5;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.ponente-izquierda::after,
+.ponente-derecha::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Ponentes y Noticias: Maquetación de 3 columnas para páginas de detalle */
+body:has(.columna-derecha) > nav,
+.contenedor > nav {
+    float: left;
+    width: 20%;
+    min-height: 850px;
+    background-color: #d9e8f5;
+    padding: 20px 15px;
+    border-right: 1px solid #b5d1ea;
+}
+
+body:has(.columna-derecha) > main,
+.contenedor > main {
+    float: left;
+    width: 55%;
+    min-height: 850px;
+    background-color: #ffffff;
+    padding: 25px 20px;
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+}
+
+/* Columna lateral derecha (Aside con noticias/información extra) */
+.columna-derecha,
+.contenedor > aside {
+    float: left;
+    width: 25%;
+    min-height: 850px;
+    padding: 20px 15px;
+    background-color: #f7fbff;
+    border-left: 1px solid #d5d5d5;
+}
+
+.columna-derecha h2,
+.columna-derecha h3,
+.contenedor > aside h2,
+.contenedor > aside h3 {
+    margin-top: 0;
+    color: #1f4e79;
+    font-size: 16px;
+    border-bottom: 2px solid #1f4e79;
+    padding-bottom: 6px;
+}
+
+.columna-derecha ul,
+.contenedor > aside ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.columna-derecha li,
+.contenedor > aside li {
+    margin-bottom: 8px;
+}
+
+.columna-derecha a,
+.contenedor > aside a {
+    display: block;
+    padding: 6px 10px;
+    color: #1f4e79;
+    background-color: #ffffff;
+    border: 1px solid #c9def0;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 13px;
+    transition: all 0.2s ease;
+}
+
+.columna-derecha a:hover,
+.contenedor > aside a:hover {
+    background-color: #1f4e79;
+    color: #ffffff;
+    border-color: #163a5c;
+    text-decoration: none;
+}
