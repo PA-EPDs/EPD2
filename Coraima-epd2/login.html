@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <style>
+/* ===== Estilos comunes ===== */
+* { box-sizing: border-box; }
+
+html { background-color: #f2f2f2; }
+
+/* Diseno fijo: la pagina mide siempre 960px */
+body {
+    width: 960px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #222222;
+    box-shadow: 0 0 10px #999999;
+}
+
+header {
+    background-color: #1f4e79;
+    padding: 20px;
+    text-align: center;
+}
+header h1 {
+    margin: 0;
+    padding: 10px;
+    font-size: 30px;
+    color: #ffffff;
+}
+header p {
+    margin: 0;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+/* Menu superior */
+nav {
+    background-color: #d9e8f5;
+    padding: 10px 20px;
+}
+nav h2 {
+    margin: 0 0 8px 0;
+    font-size: 14px;
+    color: #1f4e79;
+    letter-spacing: 2px;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+nav li {
+    float: left;
+}
+nav li:not(:last-child) {
+    margin-right: 6px;
+}
+nav li:first-child a {
+    font-weight: bold;
+}
+nav a {
+    display: block;
+    padding: 8px 9px;
+    border: 1px solid #1f4e79;
+    text-decoration: none;
+}
+nav a:link, nav a:visited {
+    color: #1f4e79;
+}
+nav a:hover {
+    background-color: #1f4e79;
+    color: #ffffff;
+}
+nav a:active {
+    background-color: #102d47;
+    color: #ffffff;
+}
+
+/* Enlaces del contenido */
+a:link { color: #1f4e79; }
+a:visited { color: #5b4a8a; }
+a:hover { color: #102d47; text-decoration: underline; }
+a:active { color: #000000; }
+
+h2 { color: #1f4e79; }
+
+/* Pie de pagina */
+footer {
+    background-color: #1f4e79;
+    color: #ffffff;
+    padding: 15px;
+    margin-top: 20px;
+    text-align: center;
+}
+footer p { margin: 0; font-size: 14px; }
+
+/* ===== Estilos de login ===== */
+section { padding: 10px 20px; }
+
+form {
+    width: 420px;
+    padding: 15px 20px;
+    background-color: #d9e8f5;
+    border: 1px solid #1f4e79;
+    border-radius: 8px;
+    box-shadow: 2px 2px 6px #aaaaaa;
+}
+input {
+    border: 2px solid #9fb3c8;
+    border-radius: 4px;
+}
+input:not([type="submit"]) {
+    width: 250px;
+    padding: 6px;
+    font-size: 16px;
+}
+input:required { border-left: 6px solid #1f4e79; }
+input:valid { border-color: #5cb85c; }
+input:invalid { border-color: #e0a040; }
+input:focus {
+    background-color: #eef6ff;
+    border-color: #1f4e79;
+    outline: none;
+}
+input[type="submit"] {
+    padding: 8px 20px;
+    background-color: #1f4e79;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #102d47;
+}
+input[type="submit"]:active { background-color: #000000; }
+
+aside {
+    margin: 20px;
+    padding: 5px 20px;
+    background-color: #d9e8f5;
+    border: 1px solid #1f4e79;
+    border-radius: 6px;
+}
+summary {
+    font-weight: bold;
+    color: #1f4e79;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <hgroup>
+            <h1>Jornadas de Ponencias y Empleo 2026 - Universidad Pablo de Olavide</h1>
+            <p>Login</p>
+        </hgroup>
+    </header>
+
+    <nav>
+        <h2>MEN&Uacute; PRINCIPAL</h2>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="programa.html">Programa</a></li>
+            <li><a href="actividades.html">Actividades</a></li>
+            <li><a href="ponentes.html">Ponentes</a></li>
+            <li><a href="asociaciones.html">Asociaciones</a></li>
+            <li><a href="multimedia.html">Multimedia</a></li>
+            <li><a href="inscripcion.html">Inscripci&oacute;n</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Iniciar sesi&oacute;n</h2>
+        <form action=".">
+            <p>
+                Correo electr&oacute;nico:
+                <input type="email" name="email_control" placeholder="Escribe tu correo" autofocus required>
+            </p>
+            <p>
+                Contrase&ntilde;a:
+                <input type="password" name="password_control" required>
+            </p>
+            <p>
+                <input type="submit" value="Entrar">
+            </p>
+        </form>
+    </section>
+
+    <aside>
+        <details>
+            <summary>&iquest;No tienes cuenta?</summary>
+            <p>Reg&iacute;strate en <a href="inscripcion.html">inscripci&oacute;n</a>.</p>
+        </details>
+    </aside>
+    <footer>
+        <p>Jornadas de Ponencias y Empleo 2026</p>
+    </footer>
+</body>
+</html>
