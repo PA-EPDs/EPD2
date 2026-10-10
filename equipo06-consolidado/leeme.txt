@@ -20,7 +20,8 @@ INTEGRANTES DEL EQUIPO Y REPARTO DE RESPONSABILIDADES:
       - Tareas: Consolidación global del sitio, diseño base de estilos.css, adaptación multi-columna.
   • Paola:
       - Páginas: actividades.html, talleres.html, deportes.html, cultura.html
-      - Estado: Integradas provisionalmente desde la versión base validada de EPD1 y enlazadas a estilos.css.
+      - Maquetación: 2 columnas basada en flotantes con submenús anidados e imágenes temáticas.
+      - Estado: Entrega completada e integrada en el proyecto consolidado.
 
 ================================================================================
               1. RESUMEN DE LA PRÁCTICA
