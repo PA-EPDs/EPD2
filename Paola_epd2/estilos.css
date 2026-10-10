@@ -1,0 +1,171 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 9 oct 2026, 17:54:39
+    Author     : Paolalillo
+*/
+
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f2f2f2;
+    color: #222222;
+    font-family: Arial, sans-serif;
+}
+
+/* Cabecera principal */
+body > header {
+    width: 100%;
+    background-color: #1f4e79;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+body > header h1 {
+    margin: 0;
+    padding: 10px;
+    font-size: 30px;
+}
+
+/* Menú lateral */
+nav {
+    float: left;
+    width: 22%;
+    min-height: 750px;
+    background-color: #d9e8f5;
+    padding: 20px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav li {
+    margin-bottom: 8px;
+}
+
+nav a {
+    display: block;
+    padding: 10px;
+    border: 1px solid #1f4e79;
+    text-decoration: none;
+    color: #1f4e79;
+}
+
+nav a:hover {
+    background-color: #1f4e79;
+    color: white;
+}
+
+/* Contenido principal */
+main {
+    float: right;
+    width: 78%;
+    min-height: 750px;
+    background-color: white;
+    padding: 25px;
+}
+
+main::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Pie de página */
+body > footer {
+    clear: both;
+    background-color: #1f4e79;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Página general de ponentes: dos columnas */
+.ponente-izquierda,
+.ponente-derecha {
+    float: left;
+    width: 50%;
+    padding: 20px;
+}
+
+/* Imágenes */
+figure {
+    margin: 10px 0;
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+}
+
+figcaption {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #555555;
+}
+
+/* TRES COLUMNAS: PÁGINAS INDIVIDUALES DE PONENTES */
+
+/* Izquierda */
+body:has(.columna-derecha) > nav {
+    float: left;
+    width: 20%;
+    min-height: 750px;
+}
+
+/* Centro */
+body:has(.columna-derecha) > main {
+    float: left;
+    width: 55%;
+    min-height: 750px;
+    padding: 20px;
+    background-color: white;
+}
+
+/* Derecha */
+.columna-derecha {
+    float: left;
+    width: 25%;
+    min-height: 750px;
+    padding: 20px;
+    background-color: #d9e8f5;
+}
+
+/* Enlaces de noticias */
+.columna-derecha a {
+    color: #1f4e79;
+}
+
+.columna-derecha a:hover {
+    color: #102d47;
+    text-decoration: underline;
+}
+
+body:has(.columna-derecha) {
+    display: grid;
+    grid-template-columns: 20% 55% 25%;
+}
+
+body:has(.columna-derecha) > header,
+body:has(.columna-derecha) > footer {
+    grid-column: 1 / -1;
+}
+
+body:has(.columna-derecha) > nav,
+body:has(.columna-derecha) > main,
+.columna-derecha {
+    float: none;
+    width: auto;
+    min-height: 0;
+}
